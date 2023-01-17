@@ -9,7 +9,7 @@ const Training = require('../models/training-log');
 router.get('/admin/users', async (req, res) => {
     try {
       const users = await User.find()
-      res.json(users)
+      res.status(200).json(users)
     } catch (err) {
       res.status(500).json({ message: err.message })
     }
@@ -37,7 +37,7 @@ try {
 router.get('/admin/animals', async (req, res) => {
     try {
       const animals = await Animal.find()
-      res.json(animals)
+      res.status(200).json(animals)
     } catch (err) {
       res.status(500).json({ message: err.message })
     }
@@ -65,7 +65,7 @@ try {
 router.get('/admin/training', async (req, res) => {
     try {
       const trainings = await Training.find()
-      res.json(trainings)
+      res.status(200).json(trainings)
     } catch (err) {
       res.status(500).json({ message: err.message })
     }
