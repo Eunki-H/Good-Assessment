@@ -1,0 +1,15 @@
+GET http://localhost:5000/
+
+###
+
+Post http://localhost:5000/api/user/
+Content-Type: application/json
+
+{
+    "_id": ObjectId("123asdf"),
+    "firstName": "Eunki",
+    "lastName": "Hong",
+    "email": "lship0425@gmail.com",
+    "password": "12345678",
+    "profilePicture": "asdfasdf"
+}
